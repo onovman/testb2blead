@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2BLeadAid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/alpine.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css" integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css" integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="border-b-[0.7px] border-b-solid border-b-gray13" x-data="{menuOpen: false}">
+        <div class="header-container">
+            <div class="flex justify-between items-center py-[30px]">
+                <a href="index.html"><img src="./assets/img/logo.png" class="max-w-[82px]" width="82" height="44" alt="B2BLeadAid"></a>
+                <div class="flex items-center">
+                    <ul class="flex items-center regular:hidden">
+                        <li class="mx-[35px]"><a href="index.html" class="menuitem">Home</a></li>
+                        <li class="mx-[35px]"><a href="about.html" class="menuitem">About us</a></li>
+                        <li class="mx-[35px]"><a href="services.html" class="menuitem menuactive">Services</a></li>
+                        <li class="mx-[35px]"><a href="blog.html" class="menuitem">Blog</a></li>
+                    </ul>
+                    <a href="contactus.html" class="bg-main text-white rounded-small text-smaller px-[25px] py-[10px] phone:hidden">Contact us</a>
+                    <div class="relative w-[41px] hidden regular:block">
+                        <button type="button" x-cloak="true" class="ml-4 flex-col justify-center w-[25px]" :style="menuOpen ? 'position: fixed; transform: translateY(-50%); z-index: 3;' : 'position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 3;'"  @click="menuOpen = !menuOpen">
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'transform: translate(-10px) rotate(45deg) translate(9px)' : 'transform: translate(0) rotate(0) translate(0)'"></div>
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'visibility: hidden;opacity: 0;' : 'visibility: visible;opacity: 1;'"></div>
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'transform: translate(-10px) rotate(-45deg) translate(9px)' : 'transform: translate(0) rotate(0) translate(0)'"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed top-0 left-0 bottom-0 right-0 bg-white hidden regular:flex justify-center items-center transition-all ease-in-out" x-cloak="true" :style="menuOpen ? 'visibility: visible; opacity: 1;' : 'visibility: hidden; opacity: 0;'" style="z-index: 2;">
+            <div class="flex flex-col items-center">
+                <ul class="flex-col items-center max-w-[500px]">
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="index.html" class="">Home</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="about.html" class="">About us</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="services.html" class="">Services</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="blog.html" class="">Blog</a></li>
+                </ul>
+                <a href="contactus.html" class="bg-main text-white rounded-small text-smaller px-[25px] py-[10px] hidden phone:block mt-3">Contact us</a>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <section class="bg-main/10 mb-[400px]">
+            <div class="normal-conainer pt-[80px] pb-[250px]">
+                <div class="flex justify-center">
+                    <div class="flex flex-col items-center">
+                        <div class="w-[135px] h-[135px] bg-white rounded-circle flex justify-center items-center">
+                            <div class="w-[75px] h-[75px]" style="background: center / contain no-repeat url(./assets/img/speaker.png)"></div>
+                        </div>
+                        <div class="font-medium text-big middlephone:text-medium my-[20px]">Our <span class="hightled font-semibold">Services</span></div>
+                        <div class="max-w-[440px] middlephone:max-w-[200px] text-gray16 leading-relaxed text-seminormal middlephone:text-[16px] text-center">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        </div>
+                    </div>
+                </div>
+                <div class="relative m-auto max-w-[1200px] laptop:max-w-[90%] mt-[125px]">
+                    <div class="absolute left-0 w-full min-h-[450px] regular:min-h-[400px] tablet:min-h-0 top-0 px-[80px] tablet:px-[50px] middlephone:px-[30px] py-[65px] tablet:py-[40px] tablet:pb-[50px] middlephone:py-[30px] middlephone:pb-[50px] rounded-normal bg-white" style="box-shadow: 0 4px 114px rgba(0,0,0,.09);">
+                        <div class="flex tablet:flex-col laptop:justify-center relative">
+                            <div class="flex flex-col border-r-[0.7px] border-r-solid border-r-gray18 tablet:border-r-0">
+                                <div class="flex mr-[50px] regular:mr-[25px] tablet:mr-0 tablet:mt-8">
+                                    <div class="w-[91px] h-[90px] laptop:w-[45px] laptop:h-[45px] laptop:min-w-[45px] laptop:rounded-normal rounded-regular" style="background: center / contain no-repeat url(./assets/img/srv1.png)"></div>
+                                    <div class="ml-[40px] laptop:ml-[20px] max-w-[323px]">
+                                        <div class="font-medium text-lregular mb-[10px] mlaptop:text-regular regular:text-semic tablet:mb-[5px]">Mobile Applications</div>
+                                        <div class="text-gray17 leading-relaxed regular:text-smaller">The simplest but robust technology to accompany with you</div>
+                                    </div>
+                                </div>
+                                <div class="flex mt-[80px] tablet:mt-8 mr-[50px] regular:mr-[25px] tablet:mr-0">
+                                    <div class="w-[91px] h-[90px] laptop:w-[45px] laptop:h-[45px] laptop:min-w-[45px] laptop:rounded-normal rounded-regular" style="background: center / contain no-repeat url(./assets/img/srv2.png)"></div>
+                                    <div class="ml-[40px] laptop:ml-[20px] max-w-[323px]">
+                                        <div class="font-medium text-lregular mb-[10px] mlaptop:text-regular regular:text-semic tablet:mb-[5px]">SEO</div>
+                                        <div class="text-gray17 leading-relaxed regular:text-smaller">Let the world find you on top of others</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex ml-[50px] regular:ml-[25px] tablet:ml-0 tablet:mt-8">
+                                    <div class="w-[91px] h-[90px] laptop:w-[45px] laptop:h-[45px] laptop:min-w-[45px] laptop:rounded-normal rounded-regular" style="background: center / contain no-repeat url(./assets/img/srv3.png)"></div>
+                                    <div class="ml-[40px] laptop:ml-[20px] max-w-[323px]">
+                                        <div class="font-medium text-lregular mb-[10px] mlaptop:text-regular regular:text-semic tablet:mb-[5px]">Web Application</div>
+                                        <div class="text-gray17 leading-relaxed regular:text-smaller">Platform independant business solutions for maximum availability</div>
+                                    </div>
+                                </div>
+                                <div class="flex mt-[80px] tablet:mt-8 ml-[50px] regular:ml-[25px] tablet:ml-0">
+                                    <div class="w-[91px] h-[90px] laptop:w-[45px] laptop:h-[45px] laptop:min-w-[45px] laptop:rounded-normal rounded-regular" style="background: center / contain no-repeat url(./assets/img/srv4.png)"></div>
+                                    <div class="ml-[40px] laptop:ml-[20px] max-w-[323px]">
+                                        <div class="font-medium text-lregular mb-[10px] mlaptop:text-regular regular:text-semic tablet:mb-[5px]">AR/VR Solutions</div>
+                                        <div class="text-gray17 leading-relaxed regular:text-smaller">Advanced autonomous technologies to make life simple</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute w-[90%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 h-[0.7px] bg-gray18 tablet:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="normal-container pb-[250px] middlephone:pb-[150px]">
+                <div class="flex regular:flex-col items-center">
+                    <div class="w-[50%] regular:flex regular:flex-col regular:items-center mregular:w-[60%] regular:w-full pr-[5%] regular:pr-0">
+                        <div class="font-semibold text-semimedium middlephone:text-mregular leading-relaxed regular:text-center"><span class="hightled">Lorem Ipsum</span> is simply dummy text of the printing. </div>
+                        <div class="text-gray6 leading-relaxed mt-[50px] middlephone:mt-[35px] mb-[75px] middlephone:mb-[50px] regular:text-center middlephone:text-small">KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website builders measuring dozens of completed projects. We build and develop mobile applications for several top platforms, including Android  & IOS. <br><br>
+                        KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web applications and website builders measuring dozens </div>
+                        <a href="contactus.html" class="text-main bg-white rounded-normal border borde-solid border-main px-[54px] py-[20px] middlephone:py-[15px] middlephone:px-[40px] middlephone:text-small">Contact us</a>
+                    </div>
+                    <div class="w-[50%] mregular:w-[40%] regular:w-full min-h-[509px] regular:min-h-[300px] regular:mt-[50px]" style="background: center / contain no-repeat url(./assets/img/illu.png)"></div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-main mb-[100px]">
+            <div class="relative mini-container py-[90px] tablet:py-[45px]">
+                <div class="flex flex-wrap justify-between middlephone:justify-center">
+                    <div class="flex flex-col items-center px-4 py-8">
+                        <div class="text-monster tablet:text-bigger phone:text-semimedium font-semibold text-white leading-relaxed">6</div>
+                        <div class="text-white tablet:text-small">Happy Clients</div>
+                    </div>
+                    <div class="flex flex-col items-center px-4 py-8">
+                        <div class="text-monster tablet:text-bigger phone:text-semimedium font-semibold text-white leading-relaxed">11</div>
+                        <div class="text-white tablet:text-small">Completed Projects</div>
+                    </div>
+                    <div class="flex flex-col items-center px-4 py-8">
+                        <div class="text-monster tablet:text-bigger phone:text-semimedium font-semibold text-white leading-relaxed">7M</div>
+                        <div class="text-white tablet:text-small">Transsactions</div>
+                    </div>
+                    <div class="flex flex-col items-center px-4 py-8">
+                        <div class="text-monster tablet:text-bigger phone:text-semimedium font-semibold text-white leading-relaxed">6000+</div>
+                        <div class="text-white tablet:text-small">Customers</div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-[50px] -left-[150px] w-[412px] h-[260px]" style="background: center / contain no-repeat url(./assets/img/angk1.png);"></div>
+                <div class="absolute -top-[75px] right-0 w-[227px] h-[138px]" style="background: center / contain no-repeat url(./assets/img/angk2.png);"></div>
+                <div class="absolute -top-[100px] left-0 w-[194px] h-[231px]" style="background: center / contain no-repeat url(./assets/img/angk3.png);"></div>
+            </div>
+        </section>
+        <section>
+            <div class="normal-container">
+                <div class="font-medium text-mregular">Our latest Projects</div>
+                <div class="glide mt-[71px] mb-[170px]">
+                    <div class="glide__track" data-glide-el="track">
+                      <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="flex flex-col">
+                                <div class="w-[333px] h-[306px] laptop:w-[250px] laptop:h-[250px] rounded-big" style="background: center / contain no-repeat url(./assets/img/proj1.png);"></div>
+                                <div class="font-semibold text-regularplus leading-relaxed my-[40px] mregular:my-[25px] pr-6">Lorem Ipsum is simply dummy text of the printing.</div>
+                                <div class="text-gray19 leading-relaxed pr-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="flex flex-col">
+                                <div class="w-[333px] h-[306px] laptop:w-[250px] laptop:h-[250px] rounded-big" style="background: center / contain no-repeat url(./assets/img/proj2.png);"></div>
+                                <div class="font-semibold text-regularplus leading-relaxed my-[40px] mregular:my-[25px] pr-6">Lorem Ipsum is simply dummy text of the printing.</div>
+                                <div class="text-gray19 leading-relaxed pr-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="flex flex-col">
+                                <div class="w-[333px] h-[306px] laptop:w-[250px] laptop:h-[250px] rounded-big" style="background: center / contain no-repeat url(./assets/img/proj3.png);"></div>
+                                <div class="font-semibold text-regularplus leading-relaxed my-[40px] mregular:my-[25px] pr-6">Lorem Ipsum is simply dummy text of the printing.</div>
+                                <div class="text-gray19 leading-relaxed pr-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="flex flex-col">
+                                <div class="w-[333px] h-[306px] laptop:w-[250px] laptop:h-[250px] rounded-big" style="background: center / contain no-repeat url(./assets/img/proj4.png);"></div>
+                                <div class="font-semibold text-regularplus leading-relaxed my-[40px] mregular:my-[25px] pr-6">Lorem Ipsum is simply dummy text of the printing.</div>
+                                <div class="text-gray19 leading-relaxed pr-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-nice">
+            <div class="normal-container relative">
+                <div class="absolute -top-8 left-0 w-[66px] h-[66px]" style="background: center / contain no-repeat url(./assets/img/star.png);"></div>
+                <div class="flex justify-center">
+                    <div class="my-[148px] mregular:my-[70px] max-w-[719px] mregular:max-w-none">
+                        <div class="mb-[80px] mregular:mb-[40px] px-[100px] mregular:px-[15px] relative">
+                            <div class="absolute -top-16 -right-4 w-[54px] h-[54px]" style="background: center / contain no-repeat url(./assets/img/chart.png);"></div>
+                            <p class="text-dark text-semimedium tablet:text-mregular phone:text-semic font-semibold text-center">Lorem Ipsum is simply dummy text of the printing. </p>
+                        </div>
+                        <div class="flex middlephone:flex-col items-center">
+                            <input type="text" placeholder="Enter your email" class="w-full tablet:text-small placeholder:text-gray7 px-[36px] phone:px-[20px] bg-white py-[20px] phone:py-[15px] rounded-normal border-none ring-0 focus:ring-0 outline-none middlephone:mb-2">
+                            <button type="submit" class="middlephone:w-full bg-black tablet:text-small text-white2 font-medium py-[20px] phone:py-[15px] px-[45px] phone:px-[20px] rounded-normal ml-[14px] middlephone:ml-0">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+    </main>
+    <script src="./assets/js/glide.js"></script>
+    <script>
+        var glide = new Glide('.glide', {
+            type: 'carousel',
+            startAt: 0,
+            perView: 3.5,
+            breakpoints: {
+                1000: { perView: 3 },
+                900: { perView: 2.5 },
+                720: { perView: 2 },
+                572: { perView: 1.5 },
+                452: { perView: 1.2 },
+                372: { perView: 1},
+
+            }
+        });
+        glide.mount();
+    </script>
+    <footer>
+        <div class="footer-container border-b-[0.8px] border-b-solid border-b-gray8 pt-[87px]">
+            <div class="mb-[53px]">
+                <div class="flex mregular:flex-col justify-between">
+                    <div class="flex-col max-w-[372px] mr-[78px] mregular:mb-[25px]">
+                        <a href="#"><img src="./assets/img/logo.png" class="max-w-[45px]" width="45" height="24" alt="B2BLeadAid"></a>
+                        <p class="text-gray6 my-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <a href="#" class="text-gray6 my-[25px]">@Lorem</a>
+                    </div>
+                    <div class="flex-col mx-[78px] min-w-[100px] mregular:min-w-0 mregular:mx-0 mregular:mb-[25px]">
+                        <p class="font-medium text-semic">About us</p>
+                        <ul class="mt-[15px]">
+                            <li class="mb-1"><a href="#" class="text-gray6">Lorem</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Portfolio</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Careers</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-col mr-[78px] mregular:mb-[25px]">
+                        <p class="font-medium text-semic">Contact us</p>
+                        <p class="text-gray6 my-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <a href="tel:+90889097890" class="text-gray6">+908 89097 890</a>
+                    </div>
+                    <div class="flex items-center self-end mregular:self-auto mregular:mb-[25px]">
+                        <a href="#" class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc1.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc2.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc3.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc4.png);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="my-[30px]">
+                <div class="flex justify-center">
+                    <p class="text-smaller text-gray9">Copyright ® 2021 Lorem All rights Recerved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

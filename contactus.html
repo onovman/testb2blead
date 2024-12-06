@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2BLeadAid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/alpine.min.js"></script>
+</head>
+<body>
+    <header class="border-b-[0.7px] border-b-solid border-b-gray13" x-data="{menuOpen: false}">
+        <div class="header-container">
+            <div class="flex justify-between items-center py-[30px]">
+                <a href="index.html"><img src="./assets/img/logo.png" class="max-w-[82px]" width="82" height="44" alt="B2BLeadAid"></a>
+                <div class="flex items-center">
+                    <ul class="flex items-center regular:hidden">
+                        <li class="mx-[35px]"><a href="index.html" class="menuitem">Home</a></li>
+                        <li class="mx-[35px]"><a href="about.html" class="menuitem">About us</a></li>
+                        <li class="mx-[35px]"><a href="services.html" class="menuitem ">Services</a></li>
+                        <li class="mx-[35px]"><a href="blog.html" class="menuitem ">Blog</a></li>
+                    </ul>
+                    <a href="contactus.html" class="bg-main text-white rounded-small text-smaller px-[25px] py-[10px] phone:hidden">Contact us</a>
+                    <div class="relative w-[41px] hidden regular:block">
+                        <button type="button" x-cloak="true" class="ml-4 flex-col justify-center w-[25px]" :style="menuOpen ? 'position: fixed; transform: translateY(-50%); z-index: 3;' : 'position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 3;'"  @click="menuOpen = !menuOpen">
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'transform: translate(-10px) rotate(45deg) translate(9px)' : 'transform: translate(0) rotate(0) translate(0)'"></div>
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'visibility: hidden;opacity: 0;' : 'visibility: visible;opacity: 1;'"></div>
+                            <div class="w-full h-[2px] bg-dark mb-1 transition-all ease-in-out" :style="menuOpen ? 'transform: translate(-10px) rotate(-45deg) translate(9px)' : 'transform: translate(0) rotate(0) translate(0)'"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed top-0 left-0 bottom-0 right-0 bg-white hidden regular:flex justify-center items-center transition-all ease-in-out" x-cloak="true" :style="menuOpen ? 'visibility: visible; opacity: 1;' : 'visibility: hidden; opacity: 0;'" style="z-index: 2;">
+            <div class="flex flex-col items-center">
+                <ul class="flex-col items-center max-w-[500px]">
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="index.html" class="">Home</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="about.html" class="">About us</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="services.html" class="">Services</a></li>
+                    <li class="mx-[35px] text-center mb-4 text-regular"><a href="blog.html" class="">Blog</a></li>
+                </ul>
+                <a href="contactus.html" class="bg-main text-white rounded-small text-smaller px-[25px] py-[10px] hidden phone:block mt-3">Contact us</a>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <section>
+            <div class="null-container">
+                <div class="flex justify-center items-center py-[165px]">
+                    <div class="w-full max-w-[50%] mregular:max-w-[100%]">
+                        <div class="w-[77px] h-[77px] rounded-circle mb-4" style="background: center / cover no-repeat url(./assets/img/avat.png)"></div>
+                        <div class="mregular:max-w-[70%] middlephone:max-w-full">
+                            <h2 class="text-bigger middlephone:text-medium font-semibold mb-[20px]">Let’s Collaborate</h2>
+                            <p class="text-gray text-regular">Lorem Ipsum is simply dummy text of the printing.</p>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[50%] mregular:w-0">
+                        <img src="./assets/img/map.png" class="w-full mregular:hidden" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="null-container mt-[64px] laptop:mt-[30px] mb-[102px]">
+                <div class="flex laptop:flex-col">
+                    <div class="laptop:my-4 pr-[97px] border-r border-r-solid border-r-gray10 laptop:px-0 laptop:border-none">
+                        <div class="mb-[18px]">Follow us</div>
+                        <div class="flex items-center self-end mregular:self-auto mregular:mb-[25px]">
+                            <a href="#" class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc1.png);"></a>
+                            <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc2.png);"></a>
+                            <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc3.png);"></a>
+                            <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc4.png);"></a>
+                        </div>
+                    </div>
+                    <div class="laptop:my-4 flex px-[105px] border-r border-r-solid border-r-gray10 laptop:px-0 laptop:border-none">
+                        <div class="flex items-center">
+                            <div class="w-[30px] h-[30px] min-w-[30px]" style="background: center / contain no-repeat url(./assets/img/phone.png);"></div>
+                            <a href="tel:+94444455556" class="text-regular font-light ml-[25px] text-nowrap">+94 4444 5555 6</a>
+                        </div>
+                    </div>
+                    <div class="laptop:my-4 flex">
+                        <div class="flex items-center pl-[45px] laptop:px-0">
+                            <div class="w-[29px] h-[29px] min-w-[29px]" style="background: center / contain no-repeat url(./assets/img/gps.png);"></div>
+                            <a href="#" class="text-regular font-light ml-[25px]">but also the leap into electronic 
+                                typesetting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-nice">
+            <div class="small-container pb-[63px]">
+                <div class="flex flex-col text-center justify-center py-[54px]">
+                    <div class="text-semimedium">Say hello</div>
+                    <div class="text-smaller font-medium text-gray11">Lorem Ipsum is simply dummy text of the printing .</div>
+                </div>
+                <form action="GET" class="flex flex-col mt-[25px]">
+                    <div class="flex middlephone:flex-col pb-[20px]">
+                        <div class="w-1/2 middlephone:w-full middlephone:pb-[20px] middlephone:pr-0 pr-[27px]">
+                            <label for="firstname" class="font-medium text-smallic text-gray12">First Name</label>
+                            <input type="text" id="firstname" class="w-full mt-[10px] bg-white py-[15px] pl-[20px] rounded-normal border-none focus:ring-0">
+                        </div>
+                        <div class="w-1/2 middlephone:w-full middlephone:pb-[20px]">
+                            <label for="lastname" class="font-medium text-smallic text-gray12">Last Name</label>
+                            <input type="text" id="lastname" class="w-full mt-[10px] bg-white py-[15px] pl-[20px] rounded-normal border-none focus:ring-0">
+                        </div>
+                    </div>
+                    <div class="w-full pb-[20px]">
+                        <label for="emailaddress" class="font-medium text-smallic text-gray12">Email Address</label>
+                        <input type="email" id="emailaddress" class="w-full mt-[10px] bg-white py-[15px] pl-[20px] rounded-normal border-none focus:ring-0">
+                    </div>
+                    <div class="w-full pb-[20px]">
+                        <label for="message" class="font-medium text-smallic text-gray12">Message</label>
+                        <textarea id="message" class="w-full mt-[10px] bg-white text-small py-[15px] h-[232px] min-h-[60px] pl-[20px] rounded-normal border-none focus:ring-0"></textarea>
+                    </div>
+                    <button type="submit" class="tablet:w-full laptop:mt-[20px] self-end mt-[57px] bg-main px-[48px] py-[15px] rounded-normal text-white">Get in touch</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container border-b-[0.8px] border-b-solid border-b-gray8 pt-[87px]">
+            <div class="mb-[53px]">
+                <div class="flex mregular:flex-col justify-between">
+                    <div class="flex-col max-w-[372px] mr-[78px] mregular:mb-[25px]">
+                        <a href="#"><img src="./assets/img/logo.png" class="max-w-[45px]" width="45" height="24" alt="B2BLeadAid"></a>
+                        <p class="text-gray6 my-[25px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <a href="#" class="text-gray6 my-[25px]">@Lorem</a>
+                    </div>
+                    <div class="flex-col mx-[78px] min-w-[100px] mregular:min-w-0 mregular:mx-0 mregular:mb-[25px]">
+                        <p class="font-medium text-semic">About us</p>
+                        <ul class="mt-[15px]">
+                            <li class="mb-1"><a href="#" class="text-gray6">Lorem</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Portfolio</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Careers</a></li>
+                            <li class="mb-1"><a href="#" class="text-gray6">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-col mr-[78px] mregular:mb-[25px]">
+                        <p class="font-medium text-semic">Contact us</p>
+                        <p class="text-gray6 my-[20px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                        <a href="tel:+90889097890" class="text-gray6">+908 89097 890</a>
+                    </div>
+                    <div class="flex items-center self-end mregular:self-auto mregular:mb-[25px]">
+                        <a href="#" class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc1.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc2.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc3.png);"></a>
+                        <a href="#"  class="bg-white w-[35px] h-[35px] mr-[16px] rounded-circle" style="box-shadow: 0px 4px 14px rgba(0,0,0,.15);background: center / 12px no-repeat url(../dist/assets/img/soc4.png);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="my-[30px]">
+                <div class="flex justify-center">
+                    <p class="text-smaller text-gray9">Copyright ® 2021 Lorem All rights Recerved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
